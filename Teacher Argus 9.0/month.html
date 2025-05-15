@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Mood Graph</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdfcfc;
+      display: flex;
+    }
+    .sidebar {
+      width: 240px;
+      background-color: #f3f2ff;
+      padding: 20px;
+      height: 100vh;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+    }
+    .sidebar h2 {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      margin-bottom: 16px;
+      color: #666;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .main {
+      flex: 1;
+      padding: 20px;
+    }
+    .top-bar {
+      margin-bottom: 10px;
+    }
+    .top-bar h1 {
+      font-size: 20px;
+      color: #444;
+    }
+    .student-name {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      color: #666;
+    }
+    .view-toggle {
+      margin-bottom: 20px;
+    }
+    .view-toggle button {
+      margin-right: 10px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #e5e5ff;
+      color: #555;
+      cursor: pointer;
+    }
+    .chart-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+    .bar-chart {
+      display: flex;
+      align-items: flex-end;
+      height: 200px;
+      border-left: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      padding-left: 20px;
+      gap: 20px;
+      position: relative;
+    }
+    .bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      color: #666;
+    }
+    .bar div {
+      width: 35px;
+      background-color: #d7e3fc;
+      border-radius: 5px 5px 0 0;
+      text-align: center;
+      padding-top: 5px;
+    }
+    .bar-label {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #999;
+    }
+    .y-axis-labels {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateX(-100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .y-axis-labels div {
+      text-align: right;
+      padding-right: 10px;
+      font-size: 13px;
+      color: #999;
+    }
+    .controls {
+      display: flex;
+      gap: 20px;
+    }
+    .controls button, .controls select {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.95em;
+      cursor: pointer;
+    }
+    .call-btn { background-color: #c1d7ec; color: #333; }
+    .send-btn { background-color: #d8e7d3; color: #333; }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>EuroSchool</h2>
+    <ul>
+      <li><a href="dashboard.html" style="text-decoration:none; color:inherit;">Dashboard</a></li>
+      <li><a href="forum.html" style="text-decoration:none; color:inherit;">Digital Forum</a></li>
+      <li><a href="graph_home.html" style="text-decoration:none; color:inherit;">Mood Graph</a></li>
+      <li><a href="AB.html" style="text-decoration:none; color:inherit;">Anonymous Box</a></li>
+      <li>Home Extension</li>
+      <li>Message Center</li>
+      <li>Curriculum</li>
+      <li>Courses</li>
+      <li>Space Walk</li>
+      <li>Performance</li>
+      <li>Calendar</li>
+      <li>Partnership Programs</li>
+      <li>Help & Support</li>
+    </ul>
+  </div>
+  <div class="main">
+    <div class="top-bar">
+      <h1>Mood Graph</h1>
+    </div>
+    <div class="student-name">Student: Ananya S. — Class 10B</div>
+
+    <div class="view-toggle">
+      <button><a href="big_graph.html" style="text-decoration:none; color:inherit;">Weekly</a></button>
+      <button><a href="month.html" style="text-decoration:none; color:inherit;">Monthly</a></button>
+      <button>Yearly</button>
+    </div>
+
+    <div class="chart-box">
+      <div class="bar-chart">
+        <div class="y-axis-labels">
+          <div>10</div>
+          <div>7</div>
+          <div>4</div>
+          <div>1</div>
+        </div>
+        <div class="bar">
+          <div style="height: 130px;">😄</div>
+          
+        </div>
+        <div class="bar">
+          <div style="height: 110px;">🙂</div>
+          
+        </div>
+        <div class="bar">
+          <div style="height: 60px;">😐</div>
+          
+        </div>
+        <div class="bar">
+          <div style="height: 80px;">😰</div>
+          
+        </div>
+        <div class="bar">
+          <div style="height: 40px;">😢</div>
+          
+        </div>
+        <div class="bar">
+          <div style="height: 70px;">😡</div>
+          
+        </div>
+        <div class="bar">
+          <div style="height: 50px;">🤢</div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="call-btn">📞 Schedule Call</button>
+      <select class="send-btn">
+        <option selected disabled>Send to...</option>
+        <option>Parent</option>
+        <option>Class Teacher</option>
+        <option>Counselor</option>
+      </select>
+    </div>
+  </div>
+</body>
+</html>

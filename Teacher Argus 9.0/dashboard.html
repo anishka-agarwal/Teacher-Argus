@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Argus Teacher Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fc;
+      display: flex;
+    }
+    .sidebar {
+      width: 240px;
+      background-color: #f0f0ff;
+      padding: 20px;
+      height: 100vh;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+    }
+    .sidebar h2 {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      margin-bottom: 16px;
+      color: #333;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .main {
+      flex: 1;
+      padding: 20px;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .top-bar h1 {
+      font-size: 20px;
+    }
+    .section {
+      margin-top: 30px;
+    }
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 220px;
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>EuroSchool</h2>
+    <ul>
+      <li><a href="dashboard.html" style="text-decoration:none; color:inherit;">Dashboard</a></li>
+      <li><a href="forum.html" style="text-decoration:none; color:inherit;">Digital Forum</a></li>
+      <li><a href="graph_home.html" style="text-decoration:none; color:inherit;">Mood Graph</a></li>
+      <li><a href="AB.html" style="text-decoration:none; color:inherit;">Anonymous Box</a></li>
+      <li>Home Extension</li>
+      <li>Message Center</li>
+      <li>Curriculum</li>
+      <li>Courses</li>
+      <li>Space Walk</li>
+      <li>Performance</li>
+      <li>Calendar</li>
+      <li>Partnership Programs</li>
+      <li>Help & Support</li>
+    </ul>
+  </div>
+  <div class="main">
+    <div class="top-bar">
+      <h1>Welcome, Teacher</h1>
+    </div>
+
+    <div class="section">
+      <h2>Overview</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Pending Anonymous Posts</h3>
+          <p>3 urgent, 5 medium</p>
+        </div>
+        <div class="card">
+          <h3>Mood Alerts</h3>
+          <p>4 low, 6 medium, 12 high</p>
+        </div>
+        <div class="card">
+          <h3>Forum Messages</h3>
+          <p>14 unread</p>
+        </div>
+        <div class="card">
+          <h3>Scheduled Calls</h3>
+          <p>2 upcoming today</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
